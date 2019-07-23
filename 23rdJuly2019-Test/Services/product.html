@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>users</title>
+
+    
+    <style type="text/css">
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        .card button:hover {
+            opacity: 0.7;
+        }
+        .checkout{
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        .checkout:hover{
+            opacity: 0.7;
+        }
+
+    </style>
+    <script type="text/javascript" src="productScript.js"></script>
+
+</head>
+
+
+
+
+<body>
+    <div class="card">
+        <img src="C:\Users\AnujKumarSingh\Documents\NodeJS\23rdJuly2019-Test\philips1.jpg" alt="philips"
+            style="width:100%">
+        <h1>philips trimmer</h1>
+        <p class="price">Rs. 1800</p>
+        <p>Best trimmer </p>
+        <p><button id='buttn' onclick="AddToCart('101')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="C:\Users\AnujKumarSingh\Documents\NodeJS\23rdJuly2019-Test\novaTrimmer.jpeg" style="width:100%">
+        <h1>Nova trimmer</h1>
+        <p class="price">Rs. 600</p>
+        <p>nova trimmer with one year warranty </p>
+        <p><button id='buttn' onclick="AddToCart('102')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="C:\Users\AnujKumarSingh\Documents\NodeJS\23rdJuly2019-Test\syskaTrimmer.jpg" style="width:100%">
+        <h1>Syska trimmer</h1>
+        <p class="price">Rs. 1500</p>
+        <p>Syska trimmer with one year warranty </p>
+        <p><button id='buttn' onclick="AddToCart('103')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="C:\Users\AnujKumarSingh\Documents\NodeJS\23rdJuly2019-Test\asuslaptop1.jpeg" style="width:100%">
+        <h1>ASUS Gaming Laptop</h1>
+        <p class="price">Rs. 50000 </p>
+        <p>Asus laptop with one year warranty </p>
+        <p><button id='buttn' onclick="AddToCart('201')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="C:\Users\AnujKumarSingh\Documents\NodeJS\23rdJuly2019-Test\lenovoTP.jpeg" style="width:100%">
+        <h1>LENOVO Gaming Laptop</h1>
+        <p class="price">Rs. 40000 </p>
+        <p>LENOVO laptop with one year warranty </p>
+        <p><button id='buttn' onclick="AddToCart('202')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="C:\Users\AnujKumarSingh\Documents\NodeJS\23rdJuly2019-Test\applelaptop.jpeg" style="width:100%">
+        <h1>Apple Laptop</h1>
+        <p class="price">Rs. 100000 </p>
+        <p>APPLE laptop with one year warranty </p>
+        <p><button id='buttn' onclick="AddToCart('203')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="C:\Users\AnujKumarSingh\Documents\NodeJS\23rdJuly2019-Test\motoMobile.jpeg" style="width:100%">
+        <h1>MOTO G5S Plus</h1>
+        <p class="price">Rs. 15000 </p>
+        <p>MOTO mobiles with one year warranty </p>
+        <p><button id='buttn' onclick="AddToCart('301')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+            <img src="C:\Users\AnujKumarSingh\Documents\NodeJS\23rdJuly2019-Test\xiaomi.jpeg" style="width:100%">
+            <h1>Redmi note 7</h1>
+            <p class="price">Rs. 20000 </p>
+            <p>REDMI Mobiles with one year warranty </p>
+            <p><button id='buttn' onclick="AddToCart('302')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+                <img src="C:\Users\AnujKumarSingh\Documents\NodeJS\23rdJuly2019-Test\appleXphone.jpeg" style="width:100%">
+                <h1>iPHONE X</h1>
+                <p class="price">Rs. 100000 </p>
+                <p>iPHONES with one year warranty </p>
+                <p><button id='buttn' onclick="AddToCart('303')">Add to Cart</button></p>
+    </div>
+    <p><button class='checkout' id='Checkout' onclick="checkout()">Check out</button></p>
+    <div id='products'></div>
+
+</body>
+
+</html>
