@@ -36,6 +36,7 @@ function incPrice(basePrice,quantity)
     return basePrice * quantity
 }
 function createTable(data2) {
+   window.location='checkOut.html'
     let rows = '';
     let i=1;
     data2.cartProducts.forEach(u => {

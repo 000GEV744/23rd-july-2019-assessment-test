@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    
+        .payment{
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        .payment:hover{
+            opacity: 0.7;
+        }
+    </style>
+    <script >
+        let TotalCost=0
+    function checkout(){
+            const _url = 'http://localhost:1264/cart';
+            fetch(_url)
+                .then(data => data.json())
+                .then(data2 => {
+                    console.log(data2);
+                    createTable(data2);
+                })
+        }
+        
+        //function for changing the quantity 
+        function changeQuantity(basePrice,i,op) {
+            var quantity = parseInt(document.getElementById(`spn${i}`).innerText)
+            if(op=='SUB')
+            {   
+                quantity--
+                if(quantity<=0){
+                    quantity=0
+                }
+                
+            }
+            if(op=='ADD')
+            { 
+                quantity++
+                if(quantity<=0){
+                   quantity=0
+                }  
+            }
+            document.getElementById(`spn${i}`).innerText = quantity;
+            document.getElementById(`totalPrice${i}`).innerText = incPrice(basePrice,quantity,op)
+        }
+        
+        //function to get the total price
+        function incPrice(basePrice,quantity,op)
+        {     if(op=='ADD'){
+              TotalCost+=basePrice
+              document.getElementById('TotalCost').innerHTML = TotalCost;
+                }
+                if(op=='SUB'){
+                    if(quantity>0){
+                   TotalCost= TotalCost-basePrice
+                }
+              document.getElementById('TotalCost').innerHTML = TotalCost;
+                }     
+            return basePrice * quantity
+        }
+
+
+        function createTable(data2) {
+           
+            let rows = '';
+            let i=1;
+            
+            data2.cartProducts.forEach(u => {
+                rows += `<tr>
+                            <td>${u.item}</td>
+                            <td>${u.price}</td>
+                            <td><button  onclick="changeQuantity(${u.price},${i},'SUB')">-</button><span id="spn${i}" >1</span><button  onclick="changeQuantity(${u.price},${i},'ADD')">+</button></td>
+                            <td id="totalPrice${i}">${u.price}</td>
+                        </tr>`
+                        i++
+                        TotalCost+=u.price
+            });
+            const _table = `<table>
+                                <tr>
+                                    <th>items</th>
+                                    <th>price</th>
+                                    <th>quantity</th>
+                                    <th>total price</th>
+                                </tr>
+                                ${rows}
+                            </table>`
+            document.getElementById('products').innerHTML = _table;
+            document.getElementById('TotalCost').innerHTML = TotalCost;
+            
+            }
+        function paymentDetail(){
+            localStorage.setItem(TotalCost,document.getElementById('products').innerHTML);
+            window.location='summary.html';
+
+            }
+        </script>
+</head>
+<body onload="checkout()">
+    <fieldset>
+        <legend><b>Check Out</b></legend>
+        <div id='products'></div>
+        <br>
+        <b>total cost: </b><span id='TotalCost'></span> 
+        <pre><span><button class='payment' id="paymentDetail" onclick="paymentDetail()">payment</button></span></pre>
+    </fieldset>
+</body>
+</html>

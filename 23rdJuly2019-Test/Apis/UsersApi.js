@@ -10,4 +10,11 @@ server.get('/',(req,res)=>{
     }));
 });
 
+server.post('/add',(req,res)=>{
+    setContentHeader(res);
+    res.end(JSON.stringify({
+        users : UServices._add(req.body)
+    }));
+});
+
 module.exports.userRoutes = server;

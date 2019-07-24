@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Summary</title>
+    <style type="text/css">
+    
+        .pay{
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        .pay:hover{
+            opacity: 0.7;
+        }
+    </style>
+
+    <script type='text/javascript' src="summaryScript.js"> </script>
+
+</head>
+<body onload='summary()'>
+    <fieldset><legend><b>Summary</b></legend>
+    <form>
+        <table>
+            <tr>
+                <td><th>
+                 Customer Name:
+                </th></td>
+                <td><input type ='text' id='Cname' placeholder="enter your name"/></td>
+                </tr>
+            <tr>
+                    <td><th>
+                     Email Id:
+                    </th></td>
+                    <td><input type ='email' id='Cemail' placeholder="enter your mail id"/></td>
+            </tr>
+           
+            <tr>
+                    <td><th>
+                     Address:
+                    </th></td>
+                    <td><input type ='text' id='Caddr' placeholder="enter your Address"/></td>
+            </tr>    
+        </table>
+        <br>
+        <span><b>Order Summary: </b></span>
+        <pre></pre><span id='summaryTable'></span>
+        <br>
+        <span><B>Total amount to pay: Rs.  </b></span><span id='totalCost'></span>
+        </pre>
+        <pre><span><input type='button' class='pay' onclick="pay()" value="pay"/></span></pre>
+    </form>
+</fieldset>
+</body>
+</html>
