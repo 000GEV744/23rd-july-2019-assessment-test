@@ -32,7 +32,7 @@
                     to: custemail,
                     subject: 'order sucessfully registered',
                     body: `<html><body>hello ${custname} <br> 
-                   <pre> your order summar: <br></pre>
+                   <pre> your order summary: <br></pre>
                     ${summary1}<br>
                     <pre> total cost of your shopping </pre>Rs. ${row[0]}
                     <pre>and will get delivered at your address:</pre>
@@ -44,6 +44,8 @@
         .then(response=>response.json())
         .then(data=>{
             console.log(data);
-        }); 
+        });
+        alert('check your email') 
         localStorage.removeItem(row[0])
+        window.location='product.html'
        } 
