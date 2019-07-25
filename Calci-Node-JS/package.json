@@ -1,0 +1,19 @@
+{
+  "name": "calcpackage",
+  "version": "1.0.0",
+  "description": "calculator node JS practice",
+  "main": "calcServices.js",
+  "scripts": {
+    "start":"node app.js",
+    "restart": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anuj Singh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  }
+}
