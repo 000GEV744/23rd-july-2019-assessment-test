@@ -1,0 +1,192 @@
+<html>
+
+<head>
+    <title>
+        Trainer
+    </title>
+    <style type="text/css">
+        .emp-input {
+            border: 1px solid;
+        }
+
+        .emp-input-spacing {
+            display: block;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        
+        .timetable {
+            border: 1px solid black;
+            margin-left: 30px;
+         }
+         .form-submit{
+            background-image: linear-gradient(to right top, #e3736e, #e5758f, #db7daf, #c889c9, #ae97dc, #8fa6f0, #62b5fd, #00c3ff, #00d7fe, #00e7e4, #00f4b6, #5ffb7a);
+         }
+
+
+        fieldset {
+            border-color: beige;
+            border: 3px solid;
+            border-radius: 3.5px;
+            margin: 10 10 0 10px;
+        }
+
+        td {
+            padding: 0 15px 0 15px;
+        }
+
+        fieldset legend {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            color: #9e4776;
+        }
+
+        label {
+            font-size: 19px;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+        }
+    </style>
+    <script type="text/javascript" src="Test12July.js"></script>
+</head>
+
+<body class="form-submit">
+
+
+    <!-- first fieldset-->
+
+    <fieldset>
+        <legend>Add Trainer details</legend>
+        <table>
+            <tr>
+                <td><label>Enter Serial Number: </label></td>
+                <td><input type="number" min="1" max="100" id="tId" class="emp-input emp-input-spacing"
+                        placeholder="ID" /></td>
+            </tr>
+
+            <tr>
+                <td><label>Enter name: </label> </td>
+                <td><input type="text" id="tName" class="emp-input emp-input-spacing" placeholder="Name" /></td>
+            </tr>
+
+            <tr>
+                <td><label>Enter Email: </label></td>
+                <td><input type="email" id="tEmail" class="emp-input emp-input-spacing" placeholder="Email" /></td>
+            </tr>
+
+            <tr>
+                <td><label>Enter Subject: </label></td>
+                <td><select id="tSubjects" class="emp-input emp-input-spacing">
+                        <option value="">-select-</option>
+                        <option value="Maths">Maths</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Biology">Biology</option>
+                        <option value="CS">Computer Science</option>
+                    </select></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="button" onclick="saveTrainer()" value="SAVE" class="emp-input-spacing" /></td>
+            </tr>     
+        </table>
+
+    </fieldset>
+
+
+
+    <!-- Second fieldset-->
+
+  
+    <fieldset><legend>Extract Available Trainer</legend>
+        <table>
+            <tr align="centre">
+                <td><label>Choose class </label></td>
+                <td><select id="tclasses" class="emp-input emp-input-spacing">
+                        <option value=" ">-select-</option>
+                        <option value="A">Class A</option>
+                        <option value="B">Class B</option>
+                    </select>
+                </td>
+                <td><label>Choose slots </label></td>
+                <td><select id="tSlot" class="emp-input emp-input-spacing">
+                        <option value=" ">-select-</option>
+                        <option value="1">7:00-9:00</option>
+                        <option value="2">9:00-11:00</option>
+                        <option value="3">11:00-1:00</option>
+                        <option value="4">2:00-4:00</option>
+                        <option value="5">4:00-6:00</option>
+                    </select>
+                </td>
+                <td><label>Choose Subject </label></td>
+                <td><select id="tChooseSubjects" class="emp-input emp-input-spacing">
+                        <option value="">-select-</option>
+                        <option value="Maths">Maths</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Biology">Biology</option>
+                        <option value="CS">Computer Science</option>
+                    </select>
+                <td><input type="button" onclick="fetchTrainer()" value="Available Trainer" class="emp-input-spacing" />
+                    
+                </td>
+            </tr>
+        </table>
+        <br>
+        <label> Available Trainers: <span id="output"></span></label>
+          </fieldset>
+
+
+    <!-- third fieldset-->
+
+    <fieldset>
+        <legend>Time Table of Classes</legend>
+        <label>Enter Class: </label>
+        <select id="timeClass" class="emp-input emp-input-spacing" onchange="getTimeTable()">
+            <option value=" ">-select-</option>
+            <option value="A">Class A</option>
+            <option value="B">Class B</option>
+        </select>
+    </fieldset>
+    <br> <br>
+
+
+
+    <!-- time table section-->
+
+     <div>
+        <table  class="timetable">
+            <tr align="centre">
+                <td><b>time</b></td>
+                <td>
+                <th>7:00-9:00</td>
+                    </td>
+                <td>
+                <th>9:00-11:00</td>
+                    </td>
+                <td>
+                <th>11:00-1:00</td>
+                    </td>
+                <td>
+                <th>1:00-2:00</td>
+                    </td>
+                <td>
+                <th>2:00-4:00</td>
+                    </td>
+                <td>
+                <th>4:00-6:00</td>
+                    </td>
+            </tr>
+            <tr>
+            <td><b>Subject</b></td>
+            </tr>
+            <tr>
+            <td><b>Trainer</b></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
