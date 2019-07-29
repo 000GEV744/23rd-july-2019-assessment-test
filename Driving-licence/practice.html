@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <title>
+        Driving licence Template
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+     function ChangeLabel(){
+         let str=`<input type="text" value=""/>`;
+         for(let i=1;i<=8;i++){
+         document.getElementById(`label${i}`).innerHTML=str;
+    }
+    document.getElementById("button").style.display = "none";
+     }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container rounded" style=" margin-top: 100px;">
+        <div class="row" style="background-color:blue;">
+            <div class="column" style="background-color:white; border: 1px solid black;padding:1% 1% 15 1%; "><img src="C:\Users\AnujKumarSingh\Documents\practice\Bootsrap\emblem.jpg" width="90" height="90" alt="Italian Trulli"></div>
+            <div class="column" style=" padding:3% 0 0 2%;">
+
+                <h2 style="color:white;font-size: 40px;">INDIAN UNION DRIVING LICENCE</h2>
+            </div>
+            <div class="column">
+                <button onclick="ChangeLabel()" id="button" style="display:inline-block; background-color:blue; line-height: 12px;
+                width: 40px;
+                font-size: 8pt;
+                font-family: tahoma;
+                margin-top: 1px;
+                margin-left: 860%;
+                border-color: blue;">
+                    <img src="C:\Users\AnujKumarSingh\Documents\practice\pencilImage.jpg" style=" width: 20px; height: 20px;"></button>
+            </div>
+        </div>
+        <div style="height:0.7%"></div>
+        <div class="row" style="background-color:cornflowerblue;">
+            <div class="column" style="font-weight: bold; font-size:20px; padding:0 0% 3% 15%;">MADHYA PRADESH STATE<br></div>
+        </div>
+        <div class="row" style="background-color:cornflowerblue;">
+            <div class="column" style="padding:0 0% 3% 10%;"><img src="C:\Users\AnujKumarSingh\Documents\practice\Bootsrap\QRCode2.jpg" width="90" height="90" alt="Italian Trulli">
+                <br><br>
+                <PRE>Org. DL. No.</PRE><label id="label8"><b>JABALPUR, MP</b></label>
+                <div style="padding:6% 0% 3% 0%; "><pre>Valid till (Non-Transport)</pre><label id="label7"> : 09-08-2036</label></div>
+            </div>
+            <div class="column" style="padding:0 0% 3% 8%;">
+                <form>
+                    <table>
+                        <tr>
+                            <th><label>Number :</label></th>
+
+                            <td><b><label id="label1">MP20N-2016-0310726</label></b></td>
+                        </tr>
+                        <tr>
+                            <th>Name :</th>
+                            <td>
+                                <b><label id="label2">ANUJ KUMAR SINGH</label></b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label>S/D/W :</label></th>
+                            <td>
+                                <b><label id="label3">SURENDRA BAHADUR SINGH</label></b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label>ADDRESS :</label></th>
+                            <td>
+                                <b><label id="label4">ZOLO ACROPOLIS</label></b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label>ISSUED ON :</label></th>
+                            <td>
+                                <label id="label5">10-08-2016</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label>DOB :</label></th>
+                            <td>
+                                <label id="label6">31-07-1997   <b>BG:</b></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2"><label>is Licence to drive :</label></th>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Vehicle Class</th>
+                                        <th>MCWGR</th>
+                                        <th>LMV-NT</th>
+
+                                    </tr>
+                                </thead>
+                                <thead>
+                                    <tr>
+                                        <th>Date Of Issue</th>
+                                        <th>10-08-2016</th>
+                                        <th>10-08-2016</th>
+
+                                    </tr>
+                                </thead>
+
+                                </tbody>
+                            </table>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="column">
+                <div style="padding:0 0% 3% 80%; "><img style="border:1px solid black;" src="C:\Users\AnujKumarSingh\Documents\practice\Bootsrap\pic.jpg" width="150" height="150"></div>
+                <pre></pre>
+                <div style="padding:0 0% 3% 80%; "><img style="border:1px solid black;" src="C:\Users\AnujKumarSingh\Documents\practice\Bootsrap\pic1.jpg" width="150" height="110"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
