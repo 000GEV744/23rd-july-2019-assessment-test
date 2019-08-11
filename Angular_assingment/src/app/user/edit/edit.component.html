@@ -1,0 +1,19 @@
+<p>edit works!</p><br><br>
+<form #registerForm="ngForm" (submit)="update()">
+    <table class="table table-striped">
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">Mobile Num</th>
+            <th scope="col">address</th>
+        </tr>
+        <tr>
+           <th scope="row"><input type="number" placeholder="id" name="id" [(ngModel)]='user.id' class="form-control-plaintext"  readonly/> <br/></th>
+           <td><input type="text" placeholder="name" name="Empname" [(ngModel)]='user.Empname' /> <br/></td>
+           <td><input type="number" placeholder="Mobile No" name="Mno" [(ngModel)]='user.Mno'/> <br/></td>
+           <td><input type="text" placeholder="address" name="address" [(ngModel)]='user.address' /> <br/></td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" class="btn btn-warning" value="Update" />
+</form>

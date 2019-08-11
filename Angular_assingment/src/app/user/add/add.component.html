@@ -1,0 +1,23 @@
+
+    <form #loginFrm="ngForm"   (submit)="login(loginFrm.value)" >
+        <div class="form-group col-7">
+                <label>EmpId</label> &nbsp;
+                <input type="number" class="form-control"  placeholder="Emp Id" name="id" ngModel />
+        </div> 
+        <div class="form-group col-7">
+            <label>Employee Name</label> &nbsp;
+            <input type="text" class="form-control"  placeholder="name" name="Empname" ngModel /> <br/>
+        </div> 
+        <div class="form-group col-7">
+            <label>Mobile No.</label> &nbsp;
+            <input type="number" class="form-control"  placeholder="mobile number" name="Mno" ngModel /> <br/>
+        </div>
+        
+        <div class="form-group col-7">    
+                <label>Address</label> &nbsp;
+                <input type="text" class="form-control"  placeholder="address" name="address" ngModel /> <br/>
+        </div>
+        <div class="form-group">    
+        <input type="submit" class="btn btn-primary" value="Add" />
+        </div>
+    </form>
